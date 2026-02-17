@@ -24,8 +24,7 @@ public class CheckoutPage extends BasePage {
 
     @FindBy(css = "input[data-test='continue']")
     private WebElement continueButton;
-
-    // Elements for Checkout Step Two
+    
     @FindBy(css = "button[data-test='finish']")
     private WebElement finishButton;
 
@@ -35,7 +34,6 @@ public class CheckoutPage extends BasePage {
     @FindBy(className = "complete-header")
     private WebElement completeHeader;
 
-    // Fill checkout form (Step 1)
     public void fillCheckoutForm(String firstName, String lastName, String postalCode) {
         enterText(firstNameInput, firstName);
         enterText(lastNameInput, lastName);

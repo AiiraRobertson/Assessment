@@ -13,19 +13,15 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(driver, this);
     }
 
-    // Locate Username field
     @FindBy(id = "user-name")
     private WebElement usernameInput;
 
-    // Locate Password field
     @FindBy(id = "password")
     private WebElement passwordInput;
 
-    // Locate Login button
     @FindBy(id = "login-button")
     private WebElement loginButton;
 
-    // Login method with waits
     public void login(String username, String password) {
         waitForVisibility(usernameInput);
         enterText(usernameInput, username);

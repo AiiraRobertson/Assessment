@@ -1,0 +1,135 @@
+name: E-Commerce Test Automation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 6 * * *'  # Run daily at 6 AM
+
+jobs:
+  test:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        java-version: ['19', '22']
+      fail-fast: false
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Java JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: ${{ matrix.java-version }}
+        distribution: 'temurin'
+        cache: maven
+
+    - name: Display Java version
+      run: java -version
+
+    - name: Clean and compile project
+      run: .\mvnw.cmd clean compile -q
+
+    - name: Run test suite
+      run: .\mvnw.cmd test -DsuiteXmlFile=testng.xml
+      continue-on-error: true
+
+    - name: Generate test report
+      if: always()
+      run: .\mvnw.cmd surefire-report:report
+      continue-on-error: true
+
+    - name: Upload test logs
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-logs-java${{ matrix.java-version }}
+        path: test-logs/
+        retention-days: 30
+
+    - name: Upload test reports
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-reports-java${{ matrix.java-version }}
+        path: target/surefire-reports/
+        retention-days: 30
+
+    - name: Publish test results
+      if: always()
+      uses: EnricoMi/publish-unit-test-result-action/windows@v2
+      with:
+        files: target/surefire-reports/*.xml
+        check_name: Test Results (Java ${{ matrix.java-version }})
+      continue-on-error: true
+
+    - name: Comment PR with test results
+      if: github.event_name == 'pull_request' && always()
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const testResultsPath = 'target/surefire-reports/TEST-Tests.EcomTests.xml';
+          
+          if (fs.existsSync(testResultsPath)) {
+            const content = fs.readFileSync(testResultsPath, 'utf8');
+            const testsMatch = content.match(/tests="(\d+)"/);
+            const failuresMatch = content.match(/failures="(\d+)"/);
+            const skippedMatch = content.match(/skipped="(\d+)"/);
+            
+            const totalTests = testsMatch ? testsMatch[1] : 'N/A';
+            const failures = failuresMatch ? failuresMatch[1] : '0';
+            const skipped = skippedMatch ? skippedMatch[1] : '0';
+            
+            const comment = `## 🧪 Test Results (Java ${{ matrix.java-version }})
+
+- **Total Tests:** ${totalTests}
+- **Failed:** ${failures}
+- **Skipped:** ${skipped}
+- **Passed:** ${totalTests - failures - skipped}
+
+📊 [View Detailed Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+          }
+      continue-on-error: true
+
+  security-scan:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '19'
+        distribution: 'temurin'
+
+    - name: Check for vulnerable dependencies
+      run: .\mvnw.cmd dependency-check:check
+      continue-on-error: true
+
+  code-quality:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '19'
+        distribution: 'temurin'
+
+    - name: Build project
+      run: .\mvnw.cmd clean package -q
+      continue-on-error: true
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E-Commerce Test Suite" verbose="2" parallel="false">
+
+    <!-- Custom listeners for reporting and logging -->
+    <listeners>
+        <listener class-name="Utitlity.TestListener"/>
+    </listeners>
+
+    <test name="Ecom Tests">
+        <classes>
+            <class name="Tests.EcomTests">
+                <methods>
+                    <include name="NavigateToEcommerceLandingPage"/>
+                    <include name="SearchForProduct"/>
+                    <include name="AddProductToCart"/>
+                    <include name="ProceedToCheckout"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
+
+

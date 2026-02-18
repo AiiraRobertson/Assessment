@@ -34,8 +34,8 @@ public class CartPage extends BasePage {
         click(checkoutButton);
     }
 
+    //
     public boolean isCartListDisplayed() {
         return cartList.isDisplayed();
     }
 }
-

@@ -809,3 +809,270 @@
 [2026-02-18 13:17:03] INFO  LoggerUtil - STEP: Clicking checkout button
 [2026-02-18 13:17:04] INFO  LoggerUtil - Checkout page loaded
 [2026-02-18 13:17:04] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 16:33:06] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:33:08] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:33:11] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:33:11] INFO  LoggerUtil - ========== TEST START: NavigateToEcommerceLandingPage ==========
+[2026-02-18 16:33:11] INFO  LoggerUtil - STEP: Verifying current URL matches expected URL
+[2026-02-18 16:33:12] INFO  LoggerUtil - Current URL: https://www.saucedemo.com/inventory.html
+[2026-02-18 16:33:12] INFO  LoggerUtil - ASSERTION: URL verification completed
+[2026-02-18 16:33:12] INFO  LoggerUtil - ========== TEST END: NavigateToEcommerceLandingPage ==========
+[2026-02-18 16:33:15] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:33:17] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:33:24] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:33:24] INFO  LoggerUtil - ========== TEST START: SearchForProduct ==========
+[2026-02-18 16:33:24] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 16:33:25] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 16:33:25] INFO  LoggerUtil - STEP: Verifying back to products button is displayed
+[2026-02-18 16:33:25] INFO  LoggerUtil - ASSERTION: Back to products button verification completed
+[2026-02-18 16:33:25] INFO  LoggerUtil - STEP: Verifying product details container is displayed
+[2026-02-18 16:33:26] INFO  LoggerUtil - ASSERTION: Product details container verification completed
+[2026-02-18 16:33:26] INFO  LoggerUtil - ========== TEST END: SearchForProduct ==========
+[2026-02-18 16:34:06] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:34:08] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:34:10] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:34:10] INFO  LoggerUtil - ========== TEST START: AddProductToCart ==========
+[2026-02-18 16:34:10] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 16:34:10] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 16:34:10] INFO  LoggerUtil - STEP: Verifying add to cart button is displayed
+[2026-02-18 16:34:10] INFO  LoggerUtil - STEP: Clicking add to cart button
+[2026-02-18 16:34:10] INFO  LoggerUtil - Product added to cart
+[2026-02-18 16:34:10] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 16:34:10] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 16:34:10] INFO  LoggerUtil - STEP: Verifying cart count is not empty
+[2026-02-18 16:34:10] INFO  LoggerUtil - Cart count: 1
+[2026-02-18 16:34:10] INFO  LoggerUtil - ASSERTION: Cart count verification completed
+[2026-02-18 16:34:10] INFO  LoggerUtil - ========== TEST END: AddProductToCart ==========
+[2026-02-18 16:34:15] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:34:22] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:34:23] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:34:23] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 16:34:23] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 16:35:47] WARN  LoggerUtil - Test failed: ProceedToCheckout. Retrying attempt 1 of 3
+[2026-02-18 16:35:50] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:35:52] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:35:54] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:35:54] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 16:35:54] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 16:35:54] INFO  LoggerUtil - Product added to cart
+[2026-02-18 16:35:54] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 16:35:54] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 16:35:54] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 16:35:55] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 16:35:55] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 16:37:15] WARN  LoggerUtil - Test failed: ProceedToCheckout. Retrying attempt 2 of 3
+[2026-02-18 16:37:17] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:37:19] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:37:20] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:37:20] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 16:37:20] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 16:37:20] INFO  LoggerUtil - Product added to cart
+[2026-02-18 16:37:20] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 16:37:20] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 16:37:20] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 16:37:21] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 16:37:21] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 16:37:21] INFO  LoggerUtil - ASSERTION: Cart page verification completed
+[2026-02-18 16:37:21] INFO  LoggerUtil - STEP: Verifying checkout button is displayed
+[2026-02-18 16:37:21] INFO  LoggerUtil - ASSERTION: Checkout button verification completed
+[2026-02-18 16:37:21] INFO  LoggerUtil - STEP: Clicking checkout button
+[2026-02-18 16:37:21] INFO  LoggerUtil - Checkout page loaded
+[2026-02-18 16:37:21] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 16:37:21] INFO  LoggerUtil - ASSERTION: Checkout form verification completed
+[2026-02-18 16:37:21] INFO  LoggerUtil - STEP: Filling checkout form with test data
+[2026-02-18 16:37:22] INFO  LoggerUtil - Checkout form filled
+[2026-02-18 16:37:22] INFO  LoggerUtil - STEP: Clicking continue button
+[2026-02-18 16:37:22] INFO  LoggerUtil - Checkout step 2 page loaded
+[2026-02-18 16:37:22] INFO  LoggerUtil - STEP: Verifying finish button is displayed
+[2026-02-18 16:38:42] WARN  LoggerUtil - Test failed: ProceedToCheckout. Retrying attempt 3 of 3
+[2026-02-18 16:38:44] INFO  LoggerUtil - Setting up test...
+[2026-02-18 16:38:44] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 16:38:46] INFO  LoggerUtil - Setup complete
+[2026-02-18 16:38:46] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 16:38:46] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 16:38:47] INFO  LoggerUtil - Product added to cart
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 16:38:47] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 16:38:47] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 16:38:47] INFO  LoggerUtil - ASSERTION: Cart page verification completed
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Verifying checkout button is displayed
+[2026-02-18 16:38:47] INFO  LoggerUtil - ASSERTION: Checkout button verification completed
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Clicking checkout button
+[2026-02-18 16:38:47] INFO  LoggerUtil - Checkout page loaded
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 16:38:47] INFO  LoggerUtil - ASSERTION: Checkout form verification completed
+[2026-02-18 16:38:47] INFO  LoggerUtil - STEP: Filling checkout form with test data
+[2026-02-18 16:38:48] INFO  LoggerUtil - Checkout form filled
+[2026-02-18 16:38:48] INFO  LoggerUtil - STEP: Clicking continue button
+[2026-02-18 16:38:48] INFO  LoggerUtil - Checkout step 2 page loaded
+[2026-02-18 16:38:48] INFO  LoggerUtil - STEP: Verifying finish button is displayed
+[2026-02-18 19:54:50] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:54:59] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:01] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:04] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:04] INFO  LoggerUtil - ========== TEST START: NavigateToEcommerceLandingPage ==========
+[2026-02-18 19:55:04] INFO  LoggerUtil - STEP: Verifying current URL matches expected URL
+[2026-02-18 19:55:04] INFO  LoggerUtil - Current URL: https://www.saucedemo.com/inventory.html
+[2026-02-18 19:55:04] INFO  LoggerUtil - ASSERTION: URL verification completed
+[2026-02-18 19:55:04] INFO  LoggerUtil - ========== TEST END: NavigateToEcommerceLandingPage ==========
+[2026-02-18 19:55:08] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:25] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:26] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:30] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:30] INFO  LoggerUtil - ========== TEST START: SearchForProduct ==========
+[2026-02-18 19:55:30] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 19:55:30] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:30] INFO  LoggerUtil - ========== TEST START: NavigateToEcommerceLandingPage ==========
+[2026-02-18 19:55:30] INFO  LoggerUtil - STEP: Verifying current URL matches expected URL
+[2026-02-18 19:55:30] INFO  LoggerUtil - Current URL: https://www.saucedemo.com/inventory.html
+[2026-02-18 19:55:30] INFO  LoggerUtil - ASSERTION: URL verification completed
+[2026-02-18 19:55:30] INFO  LoggerUtil - ========== TEST END: NavigateToEcommerceLandingPage ==========
+[2026-02-18 19:55:30] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 19:55:30] INFO  LoggerUtil - STEP: Verifying back to products button is displayed
+[2026-02-18 19:55:30] INFO  LoggerUtil - ASSERTION: Back to products button verification completed
+[2026-02-18 19:55:30] INFO  LoggerUtil - STEP: Verifying product details container is displayed
+[2026-02-18 19:55:31] INFO  LoggerUtil - ASSERTION: Product details container verification completed
+[2026-02-18 19:55:31] INFO  LoggerUtil - ========== TEST END: SearchForProduct ==========
+[2026-02-18 19:55:34] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:34] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:41] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:42] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:42] INFO  LoggerUtil - ========== TEST START: AddProductToCart ==========
+[2026-02-18 19:55:42] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 19:55:42] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 19:55:42] INFO  LoggerUtil - STEP: Verifying add to cart button is displayed
+[2026-02-18 19:55:42] INFO  LoggerUtil - STEP: Clicking add to cart button
+[2026-02-18 19:55:43] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:55:43] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:55:43] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:55:43] INFO  LoggerUtil - STEP: Verifying cart count is not empty
+[2026-02-18 19:55:43] INFO  LoggerUtil - Cart count: 1
+[2026-02-18 19:55:43] INFO  LoggerUtil - ASSERTION: Cart count verification completed
+[2026-02-18 19:55:43] INFO  LoggerUtil - ========== TEST END: AddProductToCart ==========
+[2026-02-18 19:55:44] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:44] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:45] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:45] INFO  LoggerUtil - ========== TEST START: SearchForProduct ==========
+[2026-02-18 19:55:45] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 19:55:45] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 19:55:45] INFO  LoggerUtil - STEP: Verifying back to products button is displayed
+[2026-02-18 19:55:45] INFO  LoggerUtil - ASSERTION: Back to products button verification completed
+[2026-02-18 19:55:45] INFO  LoggerUtil - STEP: Verifying product details container is displayed
+[2026-02-18 19:55:45] INFO  LoggerUtil - ASSERTION: Product details container verification completed
+[2026-02-18 19:55:45] INFO  LoggerUtil - ========== TEST END: SearchForProduct ==========
+[2026-02-18 19:55:47] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:55:58] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:58] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:55:59] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:59] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 19:55:59] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 19:55:59] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:55:59] INFO  LoggerUtil - ========== TEST START: AddProductToCart ==========
+[2026-02-18 19:55:59] INFO  LoggerUtil - STEP: Finding product: Sauce Labs Fleece Jacket
+[2026-02-18 19:56:00] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:56:00] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 19:56:00] INFO  LoggerUtil - Product found and navigated to detail page
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying add to cart button is displayed
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Clicking add to cart button
+[2026-02-18 19:56:00] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 19:56:00] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:56:00] INFO  LoggerUtil - ASSERTION: Cart page verification completed
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying checkout button is displayed
+[2026-02-18 19:56:00] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Verifying cart count is not empty
+[2026-02-18 19:56:00] INFO  LoggerUtil - ASSERTION: Checkout button verification completed
+[2026-02-18 19:56:00] INFO  LoggerUtil - STEP: Clicking checkout button
+[2026-02-18 19:56:00] INFO  LoggerUtil - Cart count: 1
+[2026-02-18 19:56:00] INFO  LoggerUtil - ASSERTION: Cart count verification completed
+[2026-02-18 19:56:00] INFO  LoggerUtil - ========== TEST END: AddProductToCart ==========
+[2026-02-18 19:56:01] INFO  LoggerUtil - Checkout page loaded
+[2026-02-18 19:56:01] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 19:56:01] INFO  LoggerUtil - ASSERTION: Checkout form verification completed
+[2026-02-18 19:56:01] INFO  LoggerUtil - STEP: Filling checkout form with test data
+[2026-02-18 19:56:02] INFO  LoggerUtil - Checkout form filled
+[2026-02-18 19:56:02] INFO  LoggerUtil - STEP: Clicking continue button
+[2026-02-18 19:56:02] INFO  LoggerUtil - Checkout step 2 page loaded
+[2026-02-18 19:56:02] INFO  LoggerUtil - STEP: Verifying finish button is displayed
+[2026-02-18 19:56:04] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:56:31] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:56:41] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:56:41] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 19:56:41] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 19:56:42] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:56:42] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:56:43] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:56:43] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 19:56:45] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 19:56:45] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 19:57:22] WARN  LoggerUtil - Test failed: ProceedToCheckout. Retrying attempt 1 of 3
+[2026-02-18 19:57:24] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:57:25] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:57:35] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:57:35] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 19:57:35] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:57:35] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 19:57:35] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 19:57:35] INFO  LoggerUtil - ASSERTION: Cart page verification completed
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Verifying checkout button is displayed
+[2026-02-18 19:57:35] INFO  LoggerUtil - ASSERTION: Checkout button verification completed
+[2026-02-18 19:57:35] INFO  LoggerUtil - STEP: Clicking checkout button
+[2026-02-18 19:57:36] INFO  LoggerUtil - Checkout page loaded
+[2026-02-18 19:57:36] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 19:57:36] INFO  LoggerUtil - ASSERTION: Checkout form verification completed
+[2026-02-18 19:57:36] INFO  LoggerUtil - STEP: Filling checkout form with test data
+[2026-02-18 19:57:36] INFO  LoggerUtil - Checkout form filled
+[2026-02-18 19:57:36] INFO  LoggerUtil - STEP: Clicking continue button
+[2026-02-18 19:57:36] INFO  LoggerUtil - Checkout step 2 page loaded
+[2026-02-18 19:57:36] INFO  LoggerUtil - STEP: Verifying finish button is displayed
+[2026-02-18 19:57:36] INFO  LoggerUtil - ASSERTION: Finish button verification completed
+[2026-02-18 19:57:36] INFO  LoggerUtil - STEP: Clicking finish button
+[2026-02-18 19:57:37] INFO  LoggerUtil - Checkout completed
+[2026-02-18 19:57:37] INFO  LoggerUtil - STEP: Verifying checkout completion
+[2026-02-18 19:57:37] INFO  LoggerUtil - ASSERTION: Checkout completion page verification completed
+[2026-02-18 19:57:37] INFO  LoggerUtil - STEP: Retrieving completion message
+[2026-02-18 19:57:37] INFO  LoggerUtil - Completion message: Thank you for your order!
+[2026-02-18 19:57:37] INFO  LoggerUtil - ASSERTION: Completion message verification completed
+[2026-02-18 19:57:37] INFO  LoggerUtil - ========== TEST END: ProceedToCheckout ==========
+[2026-02-18 19:58:05] WARN  LoggerUtil - Test failed: ProceedToCheckout. Retrying attempt 1 of 3
+[2026-02-18 19:58:06] INFO  LoggerUtil - Setting up test...
+[2026-02-18 19:58:12] INFO  LoggerUtil - Logging in with username: standard_user
+[2026-02-18 19:58:12] INFO  LoggerUtil - Setup complete
+[2026-02-18 19:58:12] INFO  LoggerUtil - ========== TEST START: ProceedToCheckout ==========
+[2026-02-18 19:58:12] INFO  LoggerUtil - STEP: Adding product to cart
+[2026-02-18 19:58:13] INFO  LoggerUtil - Product added to cart
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Verifying cart badge is displayed
+[2026-02-18 19:58:13] INFO  LoggerUtil - ASSERTION: Cart badge verification completed
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Navigating to cart page
+[2026-02-18 19:58:13] INFO  LoggerUtil - Cart page loaded
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Verifying cart page elements
+[2026-02-18 19:58:13] INFO  LoggerUtil - ASSERTION: Cart page verification completed
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Verifying checkout button is displayed
+[2026-02-18 19:58:13] INFO  LoggerUtil - ASSERTION: Checkout button verification completed
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Clicking checkout button
+[2026-02-18 19:58:13] INFO  LoggerUtil - Checkout page loaded
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Verifying checkout form is displayed
+[2026-02-18 19:58:13] INFO  LoggerUtil - ASSERTION: Checkout form verification completed
+[2026-02-18 19:58:13] INFO  LoggerUtil - STEP: Filling checkout form with test data
+[2026-02-18 19:58:14] INFO  LoggerUtil - Checkout form filled
+[2026-02-18 19:58:14] INFO  LoggerUtil - STEP: Clicking continue button
+[2026-02-18 19:58:14] INFO  LoggerUtil - Checkout step 2 page loaded
+[2026-02-18 19:58:14] INFO  LoggerUtil - STEP: Verifying finish button is displayed
+[2026-02-18 19:58:14] INFO  LoggerUtil - ASSERTION: Finish button verification completed
+[2026-02-18 19:58:14] INFO  LoggerUtil - STEP: Clicking finish button
+[2026-02-18 19:58:14] INFO  LoggerUtil - Checkout completed
+[2026-02-18 19:58:14] INFO  LoggerUtil - STEP: Verifying checkout completion
+[2026-02-18 19:58:14] INFO  LoggerUtil - ASSERTION: Checkout completion page verification completed
+[2026-02-18 19:58:14] INFO  LoggerUtil - STEP: Retrieving completion message
+[2026-02-18 19:58:14] INFO  LoggerUtil - Completion message: Thank you for your order!
+[2026-02-18 19:58:14] INFO  LoggerUtil - ASSERTION: Completion message verification completed
+[2026-02-18 19:58:14] INFO  LoggerUtil - ========== TEST END: ProceedToCheckout ==========

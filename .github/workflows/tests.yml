@@ -85,14 +85,14 @@ jobs:
             const failures = failuresMatch ? failuresMatch[1] : '0';
             const skipped = skippedMatch ? skippedMatch[1] : '0';
             
-            const comment = `## 🧪 Test Results (Java ${{ matrix.java-version }})
-
-- **Total Tests:** ${totalTests}
-- **Failed:** ${failures}
-- **Skipped:** ${skipped}
-- **Passed:** ${totalTests - failures - skipped}
-
-📊 [View Detailed Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})`;
+            const comment = `## Test Results (Java ${{ matrix.java-version }})
+          
+          Total Tests: ${totalTests}
+          Failed: ${failures}
+          Skipped: ${skipped}
+          Passed: ${totalTests - failures - skipped}
+          
+          View Detailed Report: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}`;
             
             github.rest.issues.createComment({
               issue_number: context.issue.number,

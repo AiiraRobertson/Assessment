@@ -13,8 +13,8 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class EcomTests extends BaseClass {
-    String username = testData.getUsername();
-    String password = testData.getPassword();
+    String username;
+    String password;
     ProductPage productPage;
     ProductDetailPage productDetailPage;
     CartPage cartPage;
@@ -26,6 +26,8 @@ public class EcomTests extends BaseClass {
     @SuppressWarnings("null")
     public void setUpTest() {
         LoggerUtil.info("Setting up test...");
+        username = testData.getUsername();
+        password = testData.getPassword();
         driver.get(baseUrl);
         softAssert = new SoftAssert();
         productPage = new ProductPage(driver);

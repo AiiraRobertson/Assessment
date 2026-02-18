@@ -20,7 +20,7 @@ public class ProductDetailPage extends ProductPage {
     @FindBy(css = "button[data-test='add-to-cart']")
     private WebElement addToCartButton;
 
-    @FindBy(className = "shopping_cart_badge")
+    @FindBy(css = "span[data-test='shopping-cart-badge']")
     private WebElement cartBadge;
 
     @FindBy(css = "a[data-test='shopping-cart-link']")

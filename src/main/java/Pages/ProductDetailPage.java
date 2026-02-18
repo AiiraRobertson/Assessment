@@ -1,11 +1,12 @@
 package Pages;
 
+import Base.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ProductDetailPage extends ProductPage {
+public class ProductDetailPage extends BasePage {
     public ProductDetailPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -39,7 +40,12 @@ public class ProductDetailPage extends ProductPage {
     }
 
     public boolean isCartBadgeDisplayed() {
-        return cartBadge.isDisplayed();
+        try {
+            waitForVisibility(cartBadge);
+            return cartBadge.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public void goToCart() {
